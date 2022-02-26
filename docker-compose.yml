@@ -1,0 +1,24 @@
+version: '3'
+services:
+  arango:
+    ports:
+      - 8529:8529
+    image: arangodb:3.9.0
+    environment:
+      ARANGO_ROOT_PASSWORD: root
+    tmpfs:
+      - /var/lib/arangodb3
+    mem_limit: 500m
+    mem_reservation: 300m
+  # rabbitmq:
+  #   image: rabbitmq:3-management-alpine
+  #   ports:
+  #     - 5672:5672
+  #     - 15672:15672
+  #   environment:
+  #     RABBITMQ_DEFAULT_USER: root
+  #     RABBITMQ_DEFAULT_PASS: root
+  #   tmpfs:
+  #     - /var/lib/rabbitmq
+  #   mem_limit: 500m
+  #   mem_reservation: 300m
