@@ -1,0 +1,27 @@
+{
+  "name": "@ingredifriends/database",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "db:create": "ts-node src/cmds/create-db",
+    "db:drop": "ts-node src/cmds/drop-db",
+    "db:migration": "ts-node src/cmds/migrate-db"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "chalk": "^4.1.0",
+    "foxx-cli": "^2.0.1",
+    "ts-node": "^10.5.0",
+    "umzug": "^3.0.0",
+    "urijs": "^1.19.8"
+  },
+  "dependencies": {
+    "@types/urijs": "^1.19.19",
+    "arangojs": "^7.7.0",
+    "envalid": "^7.2.2",
+    "typescript": "^4.5.5"
+  }
+}

@@ -6,8 +6,10 @@ services:
     image: arangodb:3.9.0
     environment:
       ARANGO_ROOT_PASSWORD: root
-    tmpfs:
-      - /var/lib/arangodb3
+    # tmpfs:
+    #   - /var/lib/arangodb3
+    volumes:
+      - .ingredifriends-data:/var/lib/arangodb3
     mem_limit: 500m
     mem_reservation: 300m
   # rabbitmq:

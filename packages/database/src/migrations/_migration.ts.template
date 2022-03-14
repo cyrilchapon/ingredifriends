@@ -1,0 +1,9 @@
+import type { Migration } from '../cmds/migrate-db'
+
+export const up: Migration = async ({ context: arangoDatabase }) => {
+  
+}
+
+export const down: Migration = async ({ context: arangoDatabase }) => {
+
+}
