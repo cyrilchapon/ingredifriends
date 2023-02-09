@@ -1,17 +1,21 @@
 {
   "name": "ingredifriends",
-  "packageManager": "yarn@3.2.0",
   "private": true,
   "scripts": {
-    "build": "tsc --build --force tsconfig.json",
-    "clean": "rm -rf cmd/dist client/dist",
+    "build": "yarn compile && yarn fixpath",
+    "compile": "tsc --build --force tsconfig.json",
+    "fixpath": "yarn workspaces foreach run fixpath",
     "db": "yarn workspace @ingredifriends/database",
-    "scrapper": "yarn workspace @ingredifriends/scrap"
+    "scrapper": "yarn workspace @ingredifriends/scrap",
+    "api": "yarn workspace @ingredifriends/api"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
     "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "tscpaths": "^0.0.9"
   }
 }

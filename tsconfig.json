@@ -1,7 +1,8 @@
 {
   "references": [
     { "path": "./packages/database" },
-    { "path": "./packages/scrap" }
+    { "path": "./packages/scrap" },
+    { "path": "./packages/api" }
   ],
   "files": [],
   "include": [],
